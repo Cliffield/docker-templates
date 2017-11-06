@@ -19,7 +19,7 @@
   <Project>https://github.com/Cliffield/SickRage</Project>
   <Overview>Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.</Overview>
   <Registry>https://hub.docker.com/r/cliffield/docker-sickrage/</Registry>
-  <Repository>cliffield/sickrage</Repository>
+  <Repository>cliffield/docker-sickrage</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
