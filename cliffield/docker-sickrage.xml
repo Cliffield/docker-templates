@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <TemplateURL>https://raw.githubusercontent.com/cliffield/docker-templates/master/cliffield/sickrage.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/cliffield/docker-templates/master/cliffield/docker-sickrage.xml</TemplateURL>
 <Beta>False</Beta>
 <Category>Downloaders: MediaApp:Video</Category>
 <Date>2016-08-08</Date>
