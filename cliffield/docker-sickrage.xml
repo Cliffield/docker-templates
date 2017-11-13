@@ -53,7 +53,7 @@
     </Volume>
     <Volume>
       <HostDir>/mnt/user/Media/Serien</HostDir>
-      <ContainerDir>/tv</ContainerDir>
+      <ContainerDir>/Serien</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
