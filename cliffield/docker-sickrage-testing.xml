@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/cliffield/docker-templates/master/cliffield/docker-sickrage-testing.xml</TemplateURL>
+<Beta>False</Beta>
+<Category>Downloaders: MediaApp:Video</Category>
+<Date>2016-08-08</Date>
+ <Name>sickrage-testing</Name>
+  <Changes>
+  </Changes>
+  <Description>Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.
+  [br][br]
+  [b][u][span style=\'color: #E80000;\']Configuration[/span][/u][/b][br]
+  [b]/config[/b] Where sickrage should store settings, logs and configuration[br]
+  [b]/downloads[/b] Path to your downloads folder[br]
+  [b]/tv[/b] Path to your tv-shows folder[br]
+  </Description>
+  <Project>https://github.com/Cliffield/SickRage</Project>
+  <Overview>Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.</Overview>
+  <Registry>https://hub.docker.com/r/cliffield/docker-sickrage-testing/</Registry>
+  <Repository>cliffield/docker-sickrage-testing</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>8082</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/docker-sickrage-testing</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/downloads</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media/Serien</HostDir>
+      <ContainerDir>/tv</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/sickrage-icon.png</Icon>
+  <WebUI>http://[IP]:[PORT:8082]/</WebUI>
+<BaseImage>lsiobase/alpine.python:3.6</BaseImage>
+</Container>
