@@ -4,12 +4,12 @@
 <Beta>False</Beta>
 <Category>Downloaders: MediaApp:Video</Category>
 <Date>2016-08-08</Date>
- <Name>watcher</Name>
+ <Name>watcher3</Name>
   <Changes>
   </Changes>
   <Description>Automatic Video Library Manager for Movies.
   </Description>
-  <Project>https://github.com/Cliffield/Watcher3</Project>
+  <Project>https://github.com/Cliffield/watcher3</Project>
   <Overview>Automatic Video Library Manager for Movies.</Overview>
   <Registry>https://hub.docker.com/r/cliffield/docker-watcher3/</Registry>
   <Repository>cliffield/docker-watcher3</Repository>
@@ -54,5 +54,5 @@
   </Data>
   <Icon></Icon>
   <WebUI>http://[IP]:[PORT:9090]/</WebUI>
-<BaseImage>lsiobase/alpine.python:3.6</BaseImage>
+<BaseImage>lsiobase/alpine.python3:3.6</BaseImage>
 </Container>
