@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/cliffield/docker-templates/master/cliffield/docker-nzbhydra2.xml</TemplateURL>
+<Beta>False</Beta>
+<Category>Downloaders: MediaApp:Video</Category>
+<Date>2017-01-08</Date>
+ <Name>nzbhydra2</Name>
+  <Changes>
+  </Changes>
+  <Description>Meta search for NZB indexers.
+  </Description>
+  <Project>https://github.com/theotherp/nzbhydra2</Project>
+  <Overview>Meta search for NZB indexers</Overview>
+  <Registry>https://hub.docker.com/r/cliffield/docker-nzbhydra2/</Registry>
+  <Repository>cliffield/docker-nzbhydra2</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+	<Variable>
+      <Name>HOST</Name>
+      <Value>127.0.0.1</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5076</HostPort>
+        <ContainerPort>5076</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/docker-nzbhydra2</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/hydra-icon.png</Icon>
+  <WebUI>http://[IP]:[PORT:5076]/</WebUI>
+<BaseImage>lsiobase/alpine.python:3.7</BaseImage>
+</Container>
